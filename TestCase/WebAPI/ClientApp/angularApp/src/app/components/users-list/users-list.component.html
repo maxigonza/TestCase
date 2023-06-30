@@ -1,0 +1,15 @@
+<ul class="list-group">
+  <li  *ngFor="let user of users" class="list-group-item d-flex justify-content-between align-items-right" >
+    <div>
+      <h4>{{ user.firstName }} {{ user.lastName }}</h4>
+      <p>{{ user.email }}</p>
+    </div>
+    <div class="ml-auto">
+      <span *ngIf="user.isAdmin" class="badge badge-primary badge-pill">Admin</span>
+      <button type="button" class="btn btn-warning" (click)="edit(user)">Edit</button>
+      <button type="button" class="btn btn-warning" (click)="delete(user)">Delete</button>
+    </div>
+  </li>  
+</ul>
+<h2 *ngIf="users.length == 0">User List is empty</h2>
+
