@@ -15,6 +15,7 @@ export class UserFormEditComponent {
   isAdminFormatControl = 0;
   isEditMode = false;
   touched = false;
+  isAdminSelection : any[] = [];
 
   userForm: FormGroup= new FormGroup({
     id: new FormControl(0),
@@ -29,6 +30,7 @@ export class UserFormEditComponent {
   ngOnInit(): void {
     this.masterData.getIsAdminSelection().subscribe((data: any) => {
       this.isAdminFormatControl = data.type;
+      this.isAdminSelection = data.selection;
     });
 
     this.userService.selectedUser.subscribe(user => {

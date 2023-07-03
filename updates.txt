@@ -7,9 +7,9 @@ Added Bootstrap
 Moved the content from component.html, and splitted content in another component
 Used the UserService to manage updating and refreshing users on both components
 Used a radiobutton or a select dropdown for the IsAdmin prop, depending on the result of the IsAdminSelection request.
+Options for radiobutton and select dropdown are loaded from the response of IsAdminSelection request
 Added form validators
 
 Can still be improved:
---load 'Yes' and 'No' options for IsAdmin prop, from the response data of IsAdminSelection Request
 --Services must be inside a Service folder, to keep the project organized 
 --In UserController DeleteUser can receive the Id param as the same way as Get
